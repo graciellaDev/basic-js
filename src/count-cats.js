@@ -14,7 +14,14 @@ import { NotImplementedError } from '../extensions/index.js';
  * ]) => 3`
  *
  */
-export default function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function countCats(massive) {
+  massive.forEach(function(entry_n) {
+  let count=0;
+	massive.forEach(function(entry_n) {
+	  entry_n.forEach(function(entry_m){
+	    if(entry_m=='^^'){count++;}
+	  });
+  });
+	return count;
+  });
 }
